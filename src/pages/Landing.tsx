@@ -5,7 +5,7 @@ import {
   MessageSquare, 
   Utensils, 
   FileText, 
-  FirstAid, 
+  Stethoscope, 
   Menu, 
   Pill, 
   X 
@@ -179,7 +179,7 @@ export default function Landing() {
               description="Get personalized diet recommendations based on your health profile."
             />
             <FeatureCard
-              icon={<FirstAid className="h-8 w-8" />}
+              icon={<Stethoscope className="h-8 w-8" />}
               title="Home Care Services"
               description="Book professional healthcare services to be delivered at your home."
             />

@@ -1,4 +1,5 @@
-import { Ambulance, Calendar, FirstAid, Pill, Users } from "lucide-react";
+
+import { Ambulance, Calendar, Stethoscope, Pill, Users } from "lucide-react";
 import { DashboardLayout } from "@/layouts/DashboardLayout";
 import { DashboardMetricCard } from "@/components/DashboardMetricCard";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -119,7 +120,7 @@ export default function AdminDashboard() {
               description="Total pharmacy orders this month"
             />
             <DashboardMetricCard
-              icon={<FirstAid className="h-4 w-4" />}
+              icon={<Stethoscope className="h-4 w-4" />}
               title="Total Home Care Bookings"
               value="80"
               description="Total home care bookings this month"
@@ -131,7 +132,7 @@ export default function AdminDashboard() {
               description="Average value per pharmacy order"
             />
              <DashboardMetricCard
-              icon={<FirstAid className="h-4 w-4" />}
+              icon={<Stethoscope className="h-4 w-4" />}
               title="Home Care Revenue"
               value="$12,000"
               description="Total revenue from home care services"

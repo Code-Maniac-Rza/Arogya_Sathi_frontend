@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { 
@@ -8,7 +7,7 @@ import {
   ChevronRight, 
   FileText, 
   Home, 
-  FirstAid,
+  Stethoscope,
   MapPin,
   Pill,
   Users,
@@ -65,7 +64,7 @@ export function DashboardSidebar({ isCollapsed, toggleCollapsed }: DashboardSide
     { to: "/health-records", icon: <FileText className="h-5 w-5" />, label: "Health Records" },
     { to: "/pharmacy", icon: <Pill className="h-5 w-5" />, label: "Pharmacy" },
     { to: "/diet", icon: <Utensils className="h-5 w-5" />, label: "Diet Plan" },
-    { to: "/home-care", icon: <FirstAid className="h-5 w-5" />, label: "Home Care" },
+    { to: "/home-care", icon: <Stethoscope className="h-5 w-5" />, label: "Home Care" },
     { to: "/ai-assistant", icon: <MessageSquare className="h-5 w-5" />, label: "AI Assistant" },
   ];
 
@@ -82,7 +81,7 @@ export function DashboardSidebar({ isCollapsed, toggleCollapsed }: DashboardSide
     { to: "/admin-ambulances", icon: <Ambulance className="h-5 w-5" />, label: "Ambulances" },
     { to: "/admin-bookings", icon: <Calendar className="h-5 w-5" />, label: "Bookings" },
     { to: "/admin-pharmacy", icon: <Pill className="h-5 w-5" />, label: "Pharmacy" },
-    { to: "/admin-home-care", icon: <FirstAid className="h-5 w-5" />, label: "Home Care" },
+    { to: "/admin-home-care", icon: <Stethoscope className="h-5 w-5" />, label: "Home Care" },
   ];
 
   // Select the correct navigation based on user role

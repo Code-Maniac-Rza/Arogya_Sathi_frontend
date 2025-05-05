@@ -1,4 +1,5 @@
-import { Calendar, MessageSquare, ChevronRight, FileText, MapPin, FirstAid, Pill } from "lucide-react";
+
+import { Calendar, MessageSquare, ChevronRight, FileText, MapPin, Stethoscope, Pill } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { DashboardLayout } from "@/layouts/DashboardLayout";
 import { DashboardMetricCard } from "@/components/DashboardMetricCard";
@@ -91,7 +92,7 @@ export default function PatientDashboard() {
               description="Refill needed for 1"
             />
             <DashboardMetricCard
-              icon={<FirstAid className="h-4 w-4" />}
+              icon={<Stethoscope className="h-4 w-4" />}
               title="Home Care Sessions"
               value="5"
               description="Completed this month"
