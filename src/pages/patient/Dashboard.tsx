@@ -1,5 +1,4 @@
-
-import { Calendar, ChatSquare, ChevronRight, FileText, MapPin, Medkit, Pill } from "lucide-react";
+import { Calendar, MessageSquare, ChevronRight, FileText, MapPin, FirstAid, Pill } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { DashboardLayout } from "@/layouts/DashboardLayout";
 import { DashboardMetricCard } from "@/components/DashboardMetricCard";
@@ -62,7 +61,7 @@ export default function PatientDashboard() {
               onClick={() => navigate("/ai-assistant")}
             >
               <div className="rounded-full bg-primary/10 p-3 mb-2">
-                <ChatSquare className="h-6 w-6 text-primary" />
+                <MessageSquare className="h-6 w-6 text-primary" />
               </div>
               <span className="font-medium">Ask AI Assistant</span>
             </Button>
@@ -92,7 +91,7 @@ export default function PatientDashboard() {
               description="Refill needed for 1"
             />
             <DashboardMetricCard
-              icon={<Medkit className="h-4 w-4" />}
+              icon={<FirstAid className="h-4 w-4" />}
               title="Home Care Sessions"
               value="5"
               description="Completed this month"

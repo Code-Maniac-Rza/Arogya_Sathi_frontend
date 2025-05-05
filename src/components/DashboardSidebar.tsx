@@ -8,13 +8,13 @@ import {
   ChevronRight, 
   FileText, 
   Home, 
-  Medkit,
+  FirstAid,
   MapPin,
   Pill,
   Users,
   User,
-  Diet,
-  ChatSquare,
+  Utensils,
+  MessageSquare,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/Logo";
@@ -64,9 +64,9 @@ export function DashboardSidebar({ isCollapsed, toggleCollapsed }: DashboardSide
     { to: "/telemedicine", icon: <Calendar className="h-5 w-5" />, label: "Telemedicine" },
     { to: "/health-records", icon: <FileText className="h-5 w-5" />, label: "Health Records" },
     { to: "/pharmacy", icon: <Pill className="h-5 w-5" />, label: "Pharmacy" },
-    { to: "/diet", icon: <Diet className="h-5 w-5" />, label: "Diet Plan" },
-    { to: "/home-care", icon: <Medkit className="h-5 w-5" />, label: "Home Care" },
-    { to: "/ai-assistant", icon: <ChatSquare className="h-5 w-5" />, label: "AI Assistant" },
+    { to: "/diet", icon: <Utensils className="h-5 w-5" />, label: "Diet Plan" },
+    { to: "/home-care", icon: <FirstAid className="h-5 w-5" />, label: "Home Care" },
+    { to: "/ai-assistant", icon: <MessageSquare className="h-5 w-5" />, label: "AI Assistant" },
   ];
 
   const driverNavItems = [
@@ -82,7 +82,7 @@ export function DashboardSidebar({ isCollapsed, toggleCollapsed }: DashboardSide
     { to: "/admin-ambulances", icon: <Ambulance className="h-5 w-5" />, label: "Ambulances" },
     { to: "/admin-bookings", icon: <Calendar className="h-5 w-5" />, label: "Bookings" },
     { to: "/admin-pharmacy", icon: <Pill className="h-5 w-5" />, label: "Pharmacy" },
-    { to: "/admin-home-care", icon: <Medkit className="h-5 w-5" />, label: "Home Care" },
+    { to: "/admin-home-care", icon: <FirstAid className="h-5 w-5" />, label: "Home Care" },
   ];
 
   // Select the correct navigation based on user role

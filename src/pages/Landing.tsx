@@ -1,12 +1,11 @@
-
 import { useNavigate } from "react-router-dom";
 import { 
   Ambulance, 
   Calendar, 
-  ChatSquare, 
-  Diet, 
+  MessageSquare, 
+  Utensils, 
   FileText, 
-  Medkit, 
+  FirstAid, 
   Menu, 
   Pill, 
   X 
@@ -175,17 +174,17 @@ export default function Landing() {
               description="Store and access all your medical records securely in one place."
             />
             <FeatureCard
-              icon={<Diet className="h-8 w-8" />}
+              icon={<Utensils className="h-8 w-8" />}
               title="Diet Plans"
               description="Get personalized diet recommendations based on your health profile."
             />
             <FeatureCard
-              icon={<Medkit className="h-8 w-8" />}
+              icon={<FirstAid className="h-8 w-8" />}
               title="Home Care Services"
               description="Book professional healthcare services to be delivered at your home."
             />
             <FeatureCard
-              icon={<ChatSquare className="h-8 w-8" />}
+              icon={<MessageSquare className="h-8 w-8" />}
               title="AI Health Assistant"
               description="Get instant responses to common health queries with our AI assistant."
             />
