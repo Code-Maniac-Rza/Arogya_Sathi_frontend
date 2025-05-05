@@ -1,5 +1,5 @@
 
-import { createContext, useState, useContext, ReactNode } from "react";
+import { createContext, useState, useContext, ReactNode, useEffect } from "react";
 
 export type UserRole = "patient" | "driver" | "admin";
 
@@ -75,13 +75,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     return Promise.resolve();
   };
 
-  // Check for existing session on load
-  useState(() => {
+  // Check for existing session on load - using useEffect instead of useState
+  useEffect(() => {
     const storedUser = localStorage.getItem("arogya_user");
     if (storedUser) {
       setCurrentUser(JSON.parse(storedUser));
     }
-  });
+  }, []);
 
   const value = {
     currentUser,
