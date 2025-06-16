@@ -1,4 +1,3 @@
-
 import { useState, ReactNode, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { DashboardHeader } from "@/components/DashboardHeader";
@@ -60,12 +59,12 @@ export function DashboardLayout({ children, requiredRole }: DashboardLayoutProps
   return (
     <div className="min-h-screen flex flex-col overflow-hidden bg-background">
       <DashboardHeader toggleSidebar={toggleSidebar} />
-      <div className="flex-1 flex">
+      <div className="flex-1 flex gap-x-4">
         <DashboardSidebar
           isCollapsed={sidebarCollapsed}
           toggleCollapsed={toggleSidebar}
         />
-        <main className={`flex-1 overflow-auto transition-all ${sidebarCollapsed ? 'ml-[70px]' : 'ml-[240px]'} p-6`}>
+        <main className="flex-1 overflow-auto transition-all pt-6">
           {children}
         </main>
       </div>

@@ -34,38 +34,38 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const login = async (email: string, password: string) => {
     // Mock login for now - would be replaced with actual auth
     const user = mockUsers.find(user => user.email === email && user.password === password);
-    
+
     if (!user) {
       throw new Error("Invalid email or password");
     }
-    
+
     const { password: _, ...userData } = user;
     setCurrentUser(userData);
 
     // Store in localStorage for persistence
     localStorage.setItem("arogya_user", JSON.stringify(userData));
-    
+
     return Promise.resolve();
   };
 
   const signup = async (email: string, password: string, name: string, role: UserRole) => {
     // Mock signup - would be replaced with actual auth
     const existingUser = mockUsers.find(user => user.email === email);
-    
+
     if (existingUser) {
       throw new Error("Email already in use");
     }
-    
+
     const newUser = {
       id: Math.random().toString(36).substring(2, 9),
       email,
       name,
       role,
     };
-    
+
     setCurrentUser(newUser);
     localStorage.setItem("arogya_user", JSON.stringify(newUser));
-    
+
     return Promise.resolve();
   };
 

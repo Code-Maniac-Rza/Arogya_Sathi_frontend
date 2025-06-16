@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['var(--font-sans)'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -65,11 +67,11 @@ export default {
 				},
 				// New custom colors
 				medical: {
-					primary: '#9b87f5',
-					secondary: '#1EAEDB',
-					accent: '#33C3F0',
-					light: '#F1F1F1',
-					dark: '#222222'
+					primary: '#1E3A8A',    // Dark blue
+					secondary: '#2B9348',   // Healing green
+					accent: '#FF6B6B',      // Caring coral
+					light: '#90E0EF',       // Light blue for subtle highlights
+					dark: '#03045E'         // Dark blue for contrast
 				}
 			},
 			borderRadius: {
@@ -101,6 +103,16 @@ export default {
 				'pulse-soft': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.8' }
+				},
+				'flipOut': {
+					'0%': {
+						transform: 'rotateX(0deg)',
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'rotateX(-90deg)',
+						opacity: '0'
+					}
 				}
 			},
 			animation: {
@@ -109,8 +121,12 @@ export default {
 				'fade-in': 'fade-in 0.3s ease-out',
 				'fade-out': 'fade-out 0.3s ease-out',
 				'slide-up': 'slide-up 0.4s ease-out',
-				'pulse-soft': 'pulse-soft 2s infinite ease-in-out'
-			}
+				'pulse-soft': 'pulse-soft 2s infinite ease-in-out',
+				'flipOut': 'flipOut 0.75s ease-in-out'
+			},
+			transitionDuration: {
+				'400': '400ms',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

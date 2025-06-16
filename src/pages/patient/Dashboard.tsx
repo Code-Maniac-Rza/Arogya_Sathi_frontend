@@ -1,4 +1,3 @@
-
 import { Calendar, MessageSquare, ChevronRight, FileText, MapPin, Stethoscope, Pill } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { DashboardLayout } from "@/layouts/DashboardLayout";
@@ -13,53 +12,53 @@ export default function PatientDashboard() {
 
   return (
     <DashboardLayout requiredRole="patient">
-      <div className="space-y-8">
+      <div className="space-y-8" style={{ paddingLeft: 0, paddingRight: 0 }}>
         <div>
           <h1 className="text-3xl font-bold mb-2">Welcome, {currentUser?.name}</h1>
           <p className="text-muted-foreground">Here's what's happening with your health today.</p>
         </div>
-        
+
         {/* Quick Actions */}
         <section>
           <h2 className="text-xl font-semibold mb-4">Quick Actions</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="h-auto py-4 hover:bg-primary/5 hover:border-primary flex flex-col"
-              onClick={() => navigate("/ambulance")}
+              onClick={() => navigate("/patient/emergency-ambulance")}
             >
               <div className="rounded-full bg-primary/10 p-3 mb-2">
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
               <span className="font-medium">Book Ambulance</span>
             </Button>
-            
-            <Button 
-              variant="outline" 
+
+            <Button
+              variant="outline"
               className="h-auto py-4 hover:bg-primary/5 hover:border-primary flex flex-col"
-              onClick={() => navigate("/telemedicine")}
+              onClick={() => navigate("/patient/telemedicine")}
             >
               <div className="rounded-full bg-primary/10 p-3 mb-2">
                 <Calendar className="h-6 w-6 text-primary" />
               </div>
               <span className="font-medium">Book Consultation</span>
             </Button>
-            
-            <Button 
-              variant="outline" 
+
+            <Button
+              variant="outline"
               className="h-auto py-4 hover:bg-primary/5 hover:border-primary flex flex-col"
-              onClick={() => navigate("/pharmacy")}
+              onClick={() => navigate("/patient/pharmacy")}
             >
               <div className="rounded-full bg-primary/10 p-3 mb-2">
                 <Pill className="h-6 w-6 text-primary" />
               </div>
               <span className="font-medium">Order Medicines</span>
             </Button>
-            
-            <Button 
-              variant="outline" 
+
+            <Button
+              variant="outline"
               className="h-auto py-4 hover:bg-primary/5 hover:border-primary flex flex-col"
-              onClick={() => navigate("/ai-assistant")}
+              onClick={() => navigate("/ai-integration")}
             >
               <div className="rounded-full bg-primary/10 p-3 mb-2">
                 <MessageSquare className="h-6 w-6 text-primary" />
@@ -100,7 +99,7 @@ export default function PatientDashboard() {
             />
           </div>
         </section>
-        
+
         {/* Upcoming Activities */}
         <section>
           <div className="flex items-center justify-between mb-4">
@@ -109,7 +108,7 @@ export default function PatientDashboard() {
               View all <ChevronRight className="h-4 w-4" />
             </Button>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Card>
               <CardHeader className="pb-2">
@@ -128,7 +127,7 @@ export default function PatientDashboard() {
                 </Button>
               </CardFooter>
             </Card>
-            
+
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-lg font-medium">Lab Test Results</CardTitle>
@@ -148,7 +147,7 @@ export default function PatientDashboard() {
             </Card>
           </div>
         </section>
-        
+
         {/* Recent Orders */}
         <section>
           <div className="flex items-center justify-between mb-4">
@@ -157,7 +156,7 @@ export default function PatientDashboard() {
               View all <ChevronRight className="h-4 w-4" />
             </Button>
           </div>
-          
+
           <div className="overflow-hidden rounded-lg border">
             <table className="w-full text-sm">
               <thead>

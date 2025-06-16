@@ -1,0 +1,61 @@
+@keyframes drawPath {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fadeNumber {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.path-animation {
+    animation: drawPath 1.5s ease-out forwards;
+    animation-play-state: paused;
+    transform-origin: left;
+}
+
+.path-animation-delayed {
+    animation: drawPath 1.5s ease-out forwards;
+    animation-play-state: paused;
+    transform-origin: left;
+    animation-delay: 1s;
+}
+
+.number-animation {
+    opacity: 0;
+    animation: fadeNumber 0.5s ease-out forwards;
+    animation-play-state: paused;
+}
+
+.section-visible .path-animation,
+.section-visible .path-animation-delayed {
+    animation-play-state: running;
+}
+
+.section-visible .number-animation {
+    animation-play-state: running;
+}
+
+.section-visible .step-number:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.section-visible .step-number:nth-of-type(2) {
+    animation-delay: 0.5s;
+}
+
+.section-visible .step-number:nth-of-type(3) {
+    animation-delay: 1s;
+}

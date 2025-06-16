@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="medical-pattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <!-- Medical Cross -->
+      <path d="M20 15h10v10h10v10H30v10H20V35H10V25h10V15z" fill="#4F46E5" opacity="0.1"/>
+      <!-- Heart -->
+      <path d="M35 20c0 0-10 5-10 15 0 10 10 15 10 15s10-5 10-15c0-10-10-15-10-15z" fill="#10B981" opacity="0.1"/>
+      <!-- Stethoscope -->
+      <path d="M15 40c0 0 5-5 10 0s10 0 10 0" stroke="#F59E0B" opacity="0.1" fill="none" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="100" height="100" fill="url(#medical-pattern)"/>
+</svg> 
