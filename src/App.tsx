@@ -25,6 +25,7 @@ import DoctorProfile from "@/pages/patient/DoctorProfile";
 import HealthRecords from "@/pages/patient/HealthRecords";
 import HomeCare from "@/pages/patient/HomeCare";
 import HomeCareService from "@/pages/patient/HomeCareService";
+import Insurance from "@/pages/patient/Insurance";
 
 const queryClient = new QueryClient();
 
@@ -84,6 +85,7 @@ function AppRoutes() {
       <Route path="/patient/health-records" element={<ProtectedRoute allowedRoles={["patient"]}><HealthRecords /></ProtectedRoute>} />
       <Route path="/patient/home-care" element={<ProtectedRoute allowedRoles={["patient"]}><HomeCare /></ProtectedRoute>} />
       <Route path="/patient/home-care/:serviceId" element={<ProtectedRoute allowedRoles={["patient"]}><HomeCareService /></ProtectedRoute>} />
+      <Route path="/patient/insurance" element={<ProtectedRoute allowedRoles={["patient"]}><Insurance /></ProtectedRoute>} />
 
       <Route
         path="/driver/dashboard"

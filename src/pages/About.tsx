@@ -36,27 +36,10 @@ const team = [
     {
         name: "Rahul Rudraraf",
         role: "Founder & CEO",
-        image: "/team/founder.jpg",
+        image: "/public/founder.jpeg",
         description: "Visionary leader transforming healthcare access in India",
-    },
-    {
-        name: "Dr. Sarah Johnson",
-        role: "Chief Medical Officer",
-        image: "/team/doctor1.jpg",
-        description: "20+ years of experience in emergency medicine",
-    },
-    {
-        name: "Michael Chen",
-        role: "Head of Technology",
-        image: "/team/tech1.jpg",
-        description: "AI and Healthcare Technology Expert",
-    },
-    {
-        name: "Dr. Raj Patel",
-        role: "Medical Director",
-        image: "/team/doctor2.jpg",
-        description: "Specialist in Telemedicine",
-    },
+        quote: "Our mission is to make quality healthcare accessible to every Indian, leveraging technology to bridge the gap between patients and healthcare providers. We believe that everyone deserves access to timely, affordable, and high-quality healthcare services."
+    }
 ];
 
 const services = [
@@ -416,17 +399,16 @@ export default function About() {
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-medical-primary/10 text-medical-primary text-sm font-medium mb-4"
                         >
                             <Sparkles className="h-4 w-4" />
-                            Our Team
+                            Meet Our Founder
                         </motion.span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-6">
-                            Meet Our Experts
+                            Visionary Leadership
                         </h2>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                            Our diverse team of healthcare professionals and technology experts
-                            work together to provide the best possible care for our patients.
+                            Leading the transformation of healthcare in India
                         </p>
                     </motion.div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="max-w-4xl mx-auto">
                         {team.map((member, index) => (
                             <motion.div
                                 key={index}
@@ -434,18 +416,22 @@ export default function About() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="group relative overflow-hidden rounded-2xl bg-muted/50 p-6 hover:bg-muted/80 transition-colors"
+                                className="group relative overflow-hidden rounded-2xl bg-muted/50 p-8 hover:bg-muted/80 transition-colors"
                             >
-                                <div className="aspect-square overflow-hidden rounded-xl mb-6">
-                                    <img
-                                        src={member.image}
-                                        alt={member.name}
-                                        className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-                                    />
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                                    <div className="aspect-square overflow-hidden rounded-xl">
+                                        <img
+                                            src={member.image}
+                                            alt={member.name}
+                                            className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                                        />
+                                    </div>
+                                    <div className="space-y-4">
+                                        <h3 className="text-3xl font-semibold">{member.name}</h3>
+                                        <p className="text-medical-primary text-xl">{member.role}</p>
+                                        <p className="text-muted-foreground italic text-lg leading-relaxed">"{member.quote}"</p>
+                                    </div>
                                 </div>
-                                <h3 className="text-2xl font-semibold mb-2">{member.name}</h3>
-                                <p className="text-medical-primary text-lg mb-3">{member.role}</p>
-                                <p className="text-muted-foreground">{member.description}</p>
                             </motion.div>
                         ))}
                     </div>

@@ -14,6 +14,7 @@ import {
   User,
   Utensils,
   MessageSquare,
+  Shield,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/Logo";
@@ -65,6 +66,7 @@ export function DashboardSidebar({ isCollapsed, toggleCollapsed }: DashboardSide
     { to: "/patient/health-records", icon: <FileText className="h-5 w-5" />, label: "EHR" },
     { to: "/patient/pharmacy", icon: <Pill className="h-5 w-5" />, label: "Pharmacy" },
     { to: "/patient/home-care", icon: <Stethoscope className="h-5 w-5" />, label: "Home Care" },
+    { to: "/patient/insurance", icon: <Shield className="h-5 w-5" />, label: "Insurance" },
     { to: "/ai-integration", icon: <MessageSquare className="h-5 w-5" />, label: "Ask ArogyaAI" },
   ];
 

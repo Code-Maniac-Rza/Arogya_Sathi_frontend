@@ -315,29 +315,80 @@ export default function Services() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="group relative overflow-hidden rounded-2xl bg-background/50 backdrop-blur-sm border border-border/50 hover:border-medical-primary/50 transition-all duration-300 hover:shadow-xl"
+                                whileHover={{
+                                    scale: 1.02,
+                                    transition: { duration: 0.2 }
+                                }}
+                                className="group relative overflow-hidden rounded-2xl bg-background/50 backdrop-blur-sm border border-border/50 hover:border-medical-primary/50 transition-all duration-300 hover:shadow-xl cursor-pointer"
                                 onClick={() => handleServiceClick(service.id)}
                             >
-                                <div className="absolute inset-0 bg-gradient-to-br from-medical-primary/5 to-medical-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <motion.div
+                                    className="absolute inset-0 bg-gradient-to-br from-medical-primary/5 to-medical-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                                    whileHover={{ scale: 1.1 }}
+                                    transition={{ duration: 0.3 }}
+                                />
                                 <div className="relative p-8">
-                                    <div className="mb-6 p-4 rounded-xl bg-gradient-to-br from-medical-primary/10 to-medical-secondary/10 w-fit">
+                                    <motion.div
+                                        className="mb-6 p-4 rounded-xl bg-gradient-to-br from-medical-primary/10 to-medical-secondary/10 w-fit"
+                                        whileHover={{
+                                            rotate: [0, -5, 5, -5, 0],
+                                            transition: { duration: 0.5 }
+                                        }}
+                                    >
                                         {service.icon}
-                                    </div>
-                                    <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
+                                    </motion.div>
+                                    <motion.h3
+                                        className="text-2xl font-bold mb-3"
+                                        whileHover={{ x: 5 }}
+                                        transition={{ type: "spring", stiffness: 300 }}
+                                    >
+                                        {service.title}
+                                    </motion.h3>
                                     <p className="text-muted-foreground mb-6">{service.description}</p>
                                     <ul className="space-y-3 mb-8">
                                         {service.features.map((feature, i) => (
-                                            <li key={i} className="flex items-center text-muted-foreground">
-                                                <Heart className="h-4 w-4 mr-2 text-medical-primary" />
+                                            <motion.li
+                                                key={i}
+                                                className="flex items-center text-muted-foreground"
+                                                initial={{ opacity: 0, x: -20 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                transition={{ delay: i * 0.1 }}
+                                                whileHover={{ x: 5 }}
+                                            >
+                                                <motion.div
+                                                    whileHover={{ scale: 1.2 }}
+                                                    transition={{ type: "spring", stiffness: 400 }}
+                                                >
+                                                    <Heart className="h-4 w-4 mr-2 text-medical-primary" />
+                                                </motion.div>
                                                 {feature}
-                                            </li>
+                                            </motion.li>
                                         ))}
                                     </ul>
-                                    <div className="flex items-center text-medical-primary font-medium">
+                                    <motion.div
+                                        className="flex items-center text-medical-primary font-medium"
+                                        whileHover={{ x: 5 }}
+                                        transition={{ type: "spring", stiffness: 300 }}
+                                    >
                                         <span className="mr-2">Learn More</span>
-                                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                    </div>
+                                        <motion.div
+                                            animate={{ x: [0, 5, 0] }}
+                                            transition={{
+                                                duration: 1.5,
+                                                repeat: Infinity,
+                                                repeatType: "reverse"
+                                            }}
+                                        >
+                                            <ArrowRight className="h-4 w-4" />
+                                        </motion.div>
+                                    </motion.div>
                                 </div>
+                                <motion.div
+                                    className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-medical-primary to-medical-secondary"
+                                    initial={{ scaleX: 0 }}
+                                    whileHover={{ scaleX: 1 }}
+                                    transition={{ duration: 0.3 }}
+                                />
                             </motion.div>
                         ))}
                     </div>

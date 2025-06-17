@@ -146,7 +146,7 @@ export default function Contact() {
                                             </div>
                                             <div>
                                                 <h3 className="font-medium">Email</h3>
-                                                <p className="text-muted-foreground">support@arogyasathi.com</p>
+                                                <p className="text-muted-foreground">arogyasathi.life@gmail.com</p>
                                             </div>
                                         </motion.div>
                                         <motion.div
@@ -159,26 +159,10 @@ export default function Contact() {
                                             </div>
                                             <div>
                                                 <h3 className="font-medium">Phone</h3>
-                                                <p className="text-muted-foreground">+91 1800-XXX-XXXX</p>
+                                                <p className="text-muted-foreground">+91 836-7601201</p>
                                             </div>
                                         </motion.div>
-                                        <motion.div
-                                            className="flex items-start space-x-4 group/item"
-                                            whileHover={{ x: 5 }}
-                                            transition={{ type: "spring", stiffness: 300 }}
-                                        >
-                                            <div className="p-2 rounded-lg bg-medical-primary/10 group-hover/item:bg-medical-primary/20 transition-colors">
-                                                <MapPin className="h-6 w-6 text-medical-primary" />
-                                            </div>
-                                            <div>
-                                                <h3 className="font-medium">Address</h3>
-                                                <p className="text-muted-foreground">
-                                                    123 Healthcare Street<br />
-                                                    Medical District<br />
-                                                    Hyderabad, Telangana 500040
-                                                </p>
-                                            </div>
-                                        </motion.div>
+
                                     </div>
                                 </div>
                             </div>
