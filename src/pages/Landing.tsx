@@ -382,15 +382,18 @@ export default function Landing() {
         <div className="container px-4 md:px-6 relative z-20">
           <div className="max-w-3xl mx-auto md:mx-0 flex flex-col items-center md:items-start py-4 md:py-0">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter mb-4 text-center md:text-left drop-shadow-md">
-              AI-Powered Healthcare,
+              Your Health,
               <br />
-              <span className="text-medical-primary">Just a Click Away</span>
+              <span className="text-medical-primary">One Click Away</span>
             </h1>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mb-4 text-center md:text-left drop-shadow-md">
+              Healthcare in the Digital Era
+            </h2>
             <div className="mb-4 md:mb-6 flex justify-center md:justify-start w-full">
               <AnimatedTagline onServiceChange={setCurrentService} />
             </div>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 text-center md:text-left max-w-[500px] mx-auto md:mx-0 drop-shadow-md">
-              Experience the future of healthcare with Arogya Sathi - where cutting-edge AI meets personalized care for your complete well-being.
+              Designing a smart, affordable, accessible, and secure web platform for medical services across Hyderabad
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start w-full">
               <Button
