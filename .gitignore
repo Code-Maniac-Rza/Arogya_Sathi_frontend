@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .vercel
 .env
+
+# Gemini API Key for AI Integration
+VITE_GEMINI_API_KEY=your_api_key_here

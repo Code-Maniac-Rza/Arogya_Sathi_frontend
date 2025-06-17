@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
+# Arogya Sathi - Your Complete Healthcare Companion
 
-## Project info
+Arogya Sathi is a comprehensive healthcare platform that revolutionizes how people access medical services in India. Our platform combines cutting-edge technology with compassionate care to make healthcare accessible, efficient, and personalized for everyone.
 
-**URL**: https://lovable.dev/projects/5ef7df18-c8e6-485d-960e-071f304c66de
+## 🌟 Key Features
 
-## How can I edit this code?
+- **Emergency Services**: 24/7 emergency ambulance service with real-time tracking
+- **Telemedicine**: Virtual consultations with experienced doctors
+- **Health Records**: Secure storage and management of medical history
+- **Online Pharmacy**: Doorstep delivery of medicines
+- **Home Care**: Professional healthcare services at your home
+- **Mental Health Support**: Confidential counseling and therapy sessions
 
-There are several ways of editing your application.
+## 🚀 Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5ef7df18-c8e6-485d-960e-071f304c66de) and start prompting.
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/sathi-rescue-now.git
+cd sathi-rescue-now
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. Install dependencies:
+```bash
+npm install
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 💻 Tech Stack
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Frontend**: React with TypeScript
+- **UI Components**: shadcn-ui
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite
+- **Animation**: Framer Motion
 
-**Use GitHub Codespaces**
+## 🏥 Services
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Emergency Services
+- Real-time ambulance tracking
+- 24/7 availability
+- Trained paramedics
+- Advanced life support
 
-## What technologies are used for this project?
+### Telemedicine
+- Video consultations
+- Prescription delivery
+- Follow-up care
+- Specialist access
 
-This project is built with:
+### Online Pharmacy
+- Medicine delivery
+- Prescription management
+- Price comparison
+- Auto-refill service
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🤝 Contributing
 
-## How can I deploy this project?
+We welcome contributions to make Arogya Sathi better! Please read our contributing guidelines before submitting pull requests.
 
-Simply open [Lovable](https://lovable.dev/projects/5ef7df18-c8e6-485d-960e-071f304c66de) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## 📞 Contact
 
-Yes, you can!
+For any queries or support, please reach out to us at:
+- Email: arogyasathi.life@gmail.com
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🙏 Acknowledgments
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- All our healthcare providers and partners
+- The open-source community
+- Our dedicated team of developers and healthcare professionals
